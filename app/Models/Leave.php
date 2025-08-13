@@ -13,7 +13,7 @@ class Leave extends Model
 
     protected $primaryKey = 'leave_id';
 
-    public $incrementing = false;
+    public $incrementing = true;
     protected $keyType = 'string';
 
     public $timestamps = false;
@@ -21,10 +21,11 @@ class Leave extends Model
     protected $fillable = [
         'leave_id',
         'epf_number',
-        'approved_by',
+        'consider_by',
         'from_date',
         'to_date',
         'status',
+        'reason',
         'paid',
         'leavetype_id'
     ];
@@ -50,6 +51,11 @@ class Leave extends Model
      */
     public function approver()
     {
-        return $this->belongsTo(User::class, 'approved_by', 'epf_number');
+        return $this->belongsTo(User::class, 'consider_by', 'epf_number');
+    }
+
+    public function leaveRequestFrom()
+    {
+        return $this->hasMany(LeaveRequestFrom::class,'leave_id','leave_id');
     }
 }

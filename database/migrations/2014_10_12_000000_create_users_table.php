@@ -18,27 +18,29 @@ return new class extends Migration
             $table->string('name', 100);
             $table->string('email', 100)->unique();
             $table->string('epf_number', 20)->unique();
+            $table->string('password');
 
             // Foreign keys
             $table->string('company_id', 20);
-            $table->foreign('company_id')->references('id')->on('companies');
+            $table->foreign('company_id')->references('company_id')->on('companies');
 
             $table->string('usertype_id', 20);
             $table->foreign('usertype_id')->references('id')->on('usertypes');
+            $table->string('designation');
 
-            $table->unsignedBigInteger('supervisor_id')->nullable();
-            $table->foreign('supervisor_id')->references('id')->on('users');
+            // $table->unsignedBigInteger('supervisor_id')->nullable();
+            // $table->foreign('supervisor_id')->references('id')->on('users');
 
             // Other fields
-            $table->boolean('insurance');
-            $table->string('blood_type', 20);
-            $table->boolean('b_card_status');
+            $table->boolean('insurance')->default(false);
+            $table->string('blood_type', 20)->nullable();
+            $table->boolean('b_card_status')->default(false);
             $table->date('date_of_append');
-            $table->date('date_of_resign');
+            $table->date('date_of_resign')->nullable();
             $table->date('date_of_birth');
-            $table->string('office_phonenumber', 20);
-            $table->string('personal_phonenumber', 20);
-            $table->string('emergency_phonenumber', 20);
+            $table->string('office_phonenumber', 20)->nullable();
+            $table->string('personal_phonenumber', 20)->nullable();
+            $table->string('emergency_phonenumber', 20)->nullable();
 
             $table->timestamps(); // created_at and updated_at
         });

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
 {
     Schema::create('usertype', function (Blueprint $table) {
-        $table->string('usertype_id', 20)->primary();  // Primary key
+ $table->id('usertype_id');  // Primary key
         $table->string('usertype_name', 25);
     });
 }

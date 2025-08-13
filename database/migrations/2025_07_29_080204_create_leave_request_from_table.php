@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::create('leave_requests', function (Blueprint $table) {
+    Schema::create('leave_request_froms', function (Blueprint $table) {
         $table->id(); // Auto-increment PK for ease (optional)
         $table->string('requested_epf_number', 20);
         $table->string('leave_id', 25);

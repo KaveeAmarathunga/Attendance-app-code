@@ -9,11 +9,11 @@ class Company extends Model
 {
     use HasFactory;
 
-    protected $table = 'company'; // Optional: set if not plural
+    protected $table = 'companies'; // Optional: set if not plural
 
-    protected $primaryKey = 'company_id';
-    public $incrementing = false;
-    protected $keyType = 'string';
+    // protected $primaryKey = 'company_id';
+    // public $incrementing = false;
+    // protected $keyType = 'string';
 
     public $timestamps = false;
 
@@ -25,13 +25,6 @@ class Company extends Model
         'number_of_employees',
     ];
 
-    /**
-     * Relationship: Company has many Departments.
-     */
-    public function departments()
-    {
-        return $this->hasMany(Department::class, 'company_id', 'company_id');
-    }
 
     /**
      * Relationship: Company has many Users (employees).

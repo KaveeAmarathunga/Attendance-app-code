@@ -10,9 +10,9 @@ class Usertype extends Model
     use HasFactory;
 
     protected $table = 'usertype';
-    protected $primaryKey = 'usertype_id';
-    public $incrementing = false;
-    protected $keyType = 'string';
+    // protected $primaryKey = 'usertype_id';
+    // public $incrementing = true;
+    // protected $keyType = 'string';
     public $timestamps = false;
 
     protected $fillable = ['usertype_id', 'usertype_name'];

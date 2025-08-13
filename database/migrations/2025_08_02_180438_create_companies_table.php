@@ -15,11 +15,11 @@ return new class extends Migration
     {
         // database/migrations/xxxx_xx_xx_create_companies_table.php
 Schema::create('companies', function (Blueprint $table) {
-    $table->string('company_id')->primary();
+    $table->id('company_id');
     $table->string('name', 25);
-    $table->string('location', 25);
-    $table->string('address', 50);
-    $table->tinyInteger('number_of_employees');
+    $table->string('location', 25)->nullable();
+    $table->string('address', 50)->nullable();
+    $table->tinyInteger('number_of_employees')->default(0);
     $table->timestamps();
 });
 

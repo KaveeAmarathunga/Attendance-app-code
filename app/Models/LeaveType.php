@@ -21,8 +21,9 @@ class LeaveType extends Model
 
     protected $fillable = [
         'leavetype_id',
-        'number_of_leaves',
         'leave_type_name',
+        'number_of_leaves_for_exe',
+        'number_of_leaves_for_nonexe',
     ];
 
     /**

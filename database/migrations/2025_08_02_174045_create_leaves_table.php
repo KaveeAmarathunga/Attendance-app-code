@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('leaves', function (Blueprint $table) {
     $table->string('leave_id')->primary();
     $table->string('epf_number');
-    $table->string('approved_by');
+    $table->string('consider_by')->nullable();
     $table->date('from_date');
     $table->date('to_date');
     $table->string('status'); // pending, approved, rejected
+    $table->string('reason')->nullable();
     $table->string('paid');
     $table->string('leavetype_id');
     $table->timestamps();

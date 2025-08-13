@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LeaveRequest extends Model
+class LeaveRequestFrom extends Model
 {
     use HasFactory;
 
-    protected $table = 'leave_requests';
+    protected $table = 'leave_request_froms';
 
     protected $primaryKey = 'id'; // Optional: Laravel uses 'id' by default
 

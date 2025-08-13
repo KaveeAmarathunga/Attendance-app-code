@@ -53,8 +53,8 @@ class Attendance extends Model
     /**
      * One attendance can have multiple related requests
      */
-    public function requests()
+    public function attendanceRequests()
     {
-        return $this->hasMany(AttendanceRequestForm::class, 'attendance_id');
+        return $this->hasMany(AttendanceRequestFrom::class, 'attendance_id');
     }
 }

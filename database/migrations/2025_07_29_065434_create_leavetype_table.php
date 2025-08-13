@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('leavetype', function (Blueprint $table) {
-            $table->tinyInteger('number_of_leaves');
-        $table->string('leavetype_name',25);
-        $table->string('leavetype_id', 20)->primary();
+            $table->string('leavetype_id', 20)->primary();
+            $table->tinyInteger('number_of_leaves_for_exe');
+            $table->tinyInteger('number_of_leaves_for_nonexe');
+            $table->string('leavetype_name', 25);
         });
     }
 

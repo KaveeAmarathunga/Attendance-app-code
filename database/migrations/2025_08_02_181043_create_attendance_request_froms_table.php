@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attendance_request_forms', function (Blueprint $table) {
+        Schema::create('attendance_request_froms', function (Blueprint $table) {
             $table->id(); // Primary Key
             $table->string('requested_epf_number', 20);
             $table->string('attendance_id', 20);
