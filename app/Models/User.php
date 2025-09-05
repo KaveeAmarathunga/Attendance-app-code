@@ -20,6 +20,7 @@ class User extends Authenticatable
         'usertype_id',
         'designation',
         'company_id',
+        'supervisor',
         'date_of_birth',
         'date_of_append',
         'date_of_resign',

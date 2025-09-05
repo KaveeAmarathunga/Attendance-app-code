@@ -35,4 +35,8 @@ class LeaveRequestFrom extends Model
     {
         return $this->belongsTo(LeaveType::class, 'leave_id', 'leavetype_id');
     }
+
+    public function leave(){
+        return $this->belongsTo(Leave::class,'leave_id','leave_id');
+    }
 }

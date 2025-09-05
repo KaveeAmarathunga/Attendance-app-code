@@ -9,7 +9,7 @@ class Leave extends Model
 {
     use HasFactory;
 
-    protected $table = 'leave'; // Optional: set if your table name isn't pluralized
+    protected $table = 'leaves'; // Optional: set if your table name isn't pluralized
 
     protected $primaryKey = 'leave_id';
 
@@ -27,7 +27,8 @@ class Leave extends Model
         'status',
         'reason',
         'paid',
-        'leavetype_id'
+        'leavetype_id',
+        'requested_from'
     ];
 
     /**
@@ -54,8 +55,8 @@ class Leave extends Model
         return $this->belongsTo(User::class, 'consider_by', 'epf_number');
     }
 
-    public function leaveRequestFrom()
-    {
-        return $this->hasMany(LeaveRequestFrom::class,'leave_id','leave_id');
-    }
+    // public function leaveRequestFrom()
+    // {
+    //     return $this->hasMany(LeaveRequestFrom::class,'leave_id','leave_id');
+    // }
 }

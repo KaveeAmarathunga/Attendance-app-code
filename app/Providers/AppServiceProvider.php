@@ -27,5 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         // Passport::enablePasswordGrant();
+        Passport:: tokensExpireIn(now()->addDays(5));
+        
     }
 }

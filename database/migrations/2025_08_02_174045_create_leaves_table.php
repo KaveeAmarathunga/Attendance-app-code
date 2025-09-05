@@ -23,6 +23,7 @@ return new class extends Migration
     $table->string('reason')->nullable();
     $table->string('paid');
     $table->string('leavetype_id');
+    $table->string('requested_from');
     $table->timestamps();
 });
 

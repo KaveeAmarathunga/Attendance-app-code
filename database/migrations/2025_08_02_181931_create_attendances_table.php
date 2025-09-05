@@ -17,12 +17,14 @@ return new class extends Migration
     $table->string('attendance_id', 20)->primary();
     $table->string('epf_number', 20)->index();
     $table->date('date');
-    $table->date('check_in');
-    $table->date('check_out');
-    $table->string('check_in_approved_by', 25);
-    $table->integer('morning_allowence');
-    $table->string('check_out_approved_by', 25);
-    $table->integer('evening_allowence');
+    $table->date('check_in')->nullable();
+    $table->date('check_out')->nullable();
+    $table->string('check_in_approved_by', 25)->nullable();
+    $table->integer('morning_allowence')->nullable();
+    $table->string('check_out_approved_by', 25)->nullable();
+    $table->string('working_place', 20)->nullable();
+    $table->string('site_number', 20)->nullable();
+    $table->integer('evening_allowence')->nullable();
     $table->timestamps();
 });
 

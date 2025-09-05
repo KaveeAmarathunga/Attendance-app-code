@@ -23,9 +23,13 @@ class AttendanceRequestFrom extends Model
     /**
      * Relationship: Attendance request belongs to a user (requested by)
      */
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'epf_number', 'epf_number');
+    // public function user()
+    // {
+    //     return $this->belongsTo(User::class, 'epf_number', 'epf_number');
+    // }
+
+    public function attendance(){
+        return $this->belongsTo(Attendance::class,'attendance_id','attendance_id');
     }
 
     /**

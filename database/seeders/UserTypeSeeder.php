@@ -17,7 +17,7 @@ class UserTypeSeeder extends Seeder
     {
         
        Usertype::insert([
-            ['usertype_name'=>"top_managment"],
+            ['usertype_name'=>"top_management"],
             ['usertype_name'=>"executive"],
             ['usertype_name'=>"technician"]
         ]);

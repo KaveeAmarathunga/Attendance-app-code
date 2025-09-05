@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('usertype_id', 20);
             $table->foreign('usertype_id')->references('id')->on('usertypes');
             $table->string('designation');
+            $table->string('supervisor',20)->nullable();
 
             // $table->unsignedBigInteger('supervisor_id')->nullable();
             // $table->foreign('supervisor_id')->references('id')->on('users');

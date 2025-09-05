@@ -22,6 +22,8 @@ class Attendance extends Model
         'check_out',
         'check_in_approved_by',
         'check_out_approved_by',
+        'working_place',
+        'site_number',
         'morning_allowence',
         'evening_allowence'
     ];
