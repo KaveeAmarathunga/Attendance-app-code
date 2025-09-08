@@ -58,5 +58,7 @@ Route::middleware(['auth:api'])->group(function (){
     Route::get('/today-leave-list',[LeaveController::class,'getTodatLeaveList']);
     Route::get('/get-today-absentees',[LeaveController::class,'getTodayAbsentees']);
     Route::get('/get-today-attendance-approval-list',[AttendanceController::class,'getCheckinApprovalList']);
+    Route::post('/approve-check-in',[AttendanceController::class,'approveCheckIn']);
+    Route::post('/approve-check-out',[AttendanceController::class,'approveCheckOut']);
 
 });
